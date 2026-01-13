@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+final_infill_output/
+.env
+*.stl
