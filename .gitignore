@@ -1,5 +1,8 @@
 __pycache__/
 *.pyc
 final_infill_output/
+final_infill_output_walls_p3_p4/
+final_infill_output_walls_n/
+Carburetor_Output/
 .env
 *.stl
