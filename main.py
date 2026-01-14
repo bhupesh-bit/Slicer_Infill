@@ -7,8 +7,6 @@ from slicer_topology import classify_topology
 from infill_generator import generate_parametric_infill
 from toolpath_planner import connect_infill_smooth, optimize_travel_segments
 
-
-
 # =========================
 # CONFIG
 # =========================
@@ -19,7 +17,7 @@ AREA_THRESHOLD = 0.5
 INFILL_SPACING = 1.0
 INFILL_ANGLE = 30.0
 
-OUTPUT_DIR = "final_infill_output"
+OUTPUT_DIR = "Carburetor_Output"
 
 
 # =========================
@@ -191,7 +189,6 @@ def main():
             optimized_path = optimize_travel_segments(island, ordered_path)
 
             optimized_paths_per_island.append(optimized_path)
-
        
         # ---- OPTIMIZE ISLAND ORDER ----
         optimized_paths_per_island = order_islands_by_nearest(optimized_paths_per_island)

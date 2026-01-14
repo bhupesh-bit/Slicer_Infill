@@ -91,7 +91,7 @@ def optimize_travel_segments(island, ordered_lines):
             end_pt = Point(line.coords[-1])
             next_start = Point(ordered_lines[i + 1].coords[0])
 
-            direct = LineString([end_pt, next_start])
+            direct = LineString([end_pt, next_start])#Maybe can use curved path there following the boundary
 
             crosses_hole = False
             for h in hole_polys:
@@ -110,7 +110,7 @@ def optimize_travel_segments(island, ordered_lines):
                 p1, _ = nearest_points(end_pt, boundary)
                 p2, _ = nearest_points(next_start, boundary)
 
-                travel_line = LineString([end_pt, p1, p2, next_start])
+                travel_line = LineString([end_pt, p1,p2, next_start])
 
         optimized.append((line, travel_line))
 
